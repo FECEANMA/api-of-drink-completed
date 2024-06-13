@@ -1,0 +1,28 @@
+<div style="padding: 40px;">
+ <h1 class="text-center">Drinks</h1> 
+ <table class="table table-hover">
+    <thead class="table-danger">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Drink</th>
+            <th scope="col">Category</th>
+            <th scope="col">Glass</th>
+            <th scope="col">Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of drinkList; track $index) {
+            <tr>
+                <th scope="row">{{item.idDrink}}</th>
+                <td>{{item.strDrink}}</td>
+                <td>{{item.strCategory}}</td>
+                <td>{{item.strGlass}}</td>
+                <td>
+                    <img width="30" height="30" src="{{item.strDrinkThumb}}" alt="drink">
+                </td>
+            </tr>
+        }
+    </tbody>
+ </table>  
+</div>
+
